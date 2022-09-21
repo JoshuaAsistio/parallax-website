@@ -1,0 +1,214 @@
+:root {
+    --seconddarkestcolor: 54, 54, 51;
+    --darkestcolor: 39, 33, 33;
+    --color3: 225, 100, 40;
+    --lightestcolor: 246, 233, 233;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgb(var(--darkestcolor));
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    float: left;
+    width: 33.3%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    color: rgb(var(--lightestcolor))
+}
+
+nav ul li a:hover {
+    background-color: rgb(var(--color3));
+}
+
+#welcome-section {
+    padding: 12rem 0 12rem 0;
+    background-image: url(hd-wallpaper-ge2812785f_1920.jpg);  
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.center {
+    text-align: center;
+}
+
+h1 {
+    font-size: 7rem;
+    color: rgb(var(--lightestcolor));
+}
+
+.font {
+    font-size: 2rem;
+    color: rgb(var(--lightestcolor));
+    line-height: 4rem;
+}
+
+#about-section {
+    background-image: url(other.jpg);
+    color: rgb(var(--lightestcolor));
+    height: 100vh;
+    padding: 5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 2rem;
+    justify-items: center;
+    padding: 2rem;
+    width: 100%;
+}
+
+figure {
+    height: 300px;
+    width: 250px;
+    background-color: rgb(var(--seconddarkestcolor));
+    text-align: center;
+    padding: 20px;
+}
+
+img {
+    width: 210px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+figcaption {
+    color: rgb(var(--lightestcolor));
+    font-size: 3rem;
+}
+
+#galaxies-section {
+    background-image: url(aurora-gd4eaa2fe1_1920.jpg);
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 2rem;
+    color: rgb(var(--lightestcolor));
+}
+
+#galaxies-section a {
+    text-decoration: none;
+    display: block;
+}
+
+footer {
+    background-color: rgb(var(--seconddarkestcolor));
+    height: 100%;
+    color: rgb(var(--lightestcolor));
+    padding: 0 0 2rem 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(var(--lightestcolor));
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+.socials-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.bottom-margin {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 1000px) {
+    #about-section, #galaxies-section, #welcome-section {
+        background-attachment: scroll;
+    }
+
+    #about-section {
+        height: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    figure {
+        height: 300px;
+        width: 250px;
+    }
+
+    img {
+        height: 200px;
+        width: 201px;
+    }
+}
+
+@media (max-width: 720px) {
+    #about-section, #galaxies-section, #welcome-section {
+        background-attachment: scroll;
+    }
+
+    figure {
+        height: 300px;
+        width: 250px;
+    }
+
+    img {
+        height: 200px;
+        width: 201px;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .font {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+@media (orientation: landscape) {
+    #about-section {
+        height: 100%;
+    }
+
+    #about-section, #galaxies-section, #welcome-section {
+        background-attachment: scroll;
+    }
+}
